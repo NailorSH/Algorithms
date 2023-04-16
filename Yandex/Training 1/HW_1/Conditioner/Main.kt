@@ -10,13 +10,8 @@ fun main() {
     var resultTemp = 0
 
     when (mode) {
-        "freeze" -> {
-            resultTemp = if (roomTemp > condTemp) condTemp else roomTemp
-        }
-
-        "heat" -> {
-            resultTemp = if (roomTemp < condTemp) condTemp else roomTemp
-        }
+        "freeze" -> resultTemp = if (roomTemp > condTemp) condTemp else roomTemp
+        "heat" -> resultTemp = if (roomTemp < condTemp) condTemp else roomTemp
         "auto" -> resultTemp = condTemp
         "fan" -> resultTemp = roomTemp
     }
